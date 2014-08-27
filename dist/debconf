@@ -1,0 +1,4 @@
+slapd slapd/password1 password plop
+slapd slapd/password2 password plop
+slapd shared/organization string Rézo Rennes
+slapd slapd/domain string rez-rennes.fr

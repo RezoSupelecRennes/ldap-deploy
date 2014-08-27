@@ -1,0 +1,12 @@
+dn: cn=config
+changetype: modify
+add: olcTLSCACertificateFile
+olcTLSCACertificateFile: {{ ca }}
+-
+changetype: modify
+add: olcTLSCertificateKeyFile
+olcTLSCertificateKeyFile: {{ key }}
+-
+changetype: modify
+add: olcTLSCertificateFile
+olcTLSCertificateFile: {{ crt }}

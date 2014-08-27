@@ -1,0 +1,22 @@
+dn: cn=module{0},cn=config
+changetype: modify
+add: olcModuleLoad
+olcModuleLoad: memberof.la
+
+dn: olcOverlay={0}memberof,olcDatabase={1}hdb,cn=config
+changetype: add
+objectClass: olcOverlayConfig
+objectClass: olcMemberOf
+olcOverlay: {0}memberof
+olcMemberOfGroupOC: groupOfUniqueNames
+olcMemberOfMemberAD: uniqueMember
+olcMemberOfRefInt: TRUE
+
+dn: olcOverlay={1}memberof,olcDatabase={1}hdb,cn=config
+changetype: add
+objectClass: olcOverlayConfig
+objectClass: olcMemberOf
+olcOverlay: {1}memberof
+olcMemberOfGroupOC: organizationalRole
+olcMemberOfMemberAD: roleOccupant
+olcMemberOfRefInt: TRUE

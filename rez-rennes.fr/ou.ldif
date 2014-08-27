@@ -1,0 +1,24 @@
+dn: ou=users,dc=rez-rennes,dc=fr
+objectClass: organizationalUnit
+ou: users
+description: User accounts
+
+dn: ou=services,dc=rez-rennes,dc=fr
+objectClass: organizationalUnit
+ou: service-users
+description: Service accounts
+
+dn: ou=roles,dc=rez-rennes,dc=fr
+objectClass: organizationalUnit
+ou: roles
+description: User roles
+
+dn: ou=access,dc=rez-rennes,dc=fr
+objectClass: organizationalUnit
+ou: groups
+description: Groups
+
+dn: ou=posix,dc=rez-rennes,dc=fr
+objectClass: organizationalUnit
+ou: posix
+description: POSIX groups

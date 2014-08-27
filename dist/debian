@@ -1,0 +1,10 @@
+#!/bin/bash
+
+install_ldap() {
+    sudo debconf-set-selections "$1"
+    sudo aptitude install -y slapd ldap-utils
+}
+
+install_python() {
+    sudo aptitude install -y python3 python3-jinja2
+}

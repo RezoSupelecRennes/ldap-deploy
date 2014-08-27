@@ -1,0 +1,13 @@
+dn: dc=rez-rennes,dc=fr
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+o: Rézo Rennes
+dc: rez-rennes
+
+dn: cn=admin,dc=rez-rennes,dc=fr
+objectClass: simpleSecurityObject
+objectClass: organizationalRole
+cn: admin
+description: LDAP administrator
+userPassword: {{ passwd }}

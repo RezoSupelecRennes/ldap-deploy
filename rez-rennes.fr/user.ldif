@@ -1,0 +1,8 @@
+dn: uid={{ user }},ou=users,dc=rez-rennes,dc=fr
+objectClass: inetOrgPerson
+objectClass: person
+uid: {{ user }}
+cn: {{ name }}
+sn: {{ nick }}
+mail: {{ email }}
+userPassword: {{ passwd }}

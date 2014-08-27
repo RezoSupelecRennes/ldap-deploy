@@ -1,0 +1,4 @@
+dn: cn={{ name }},ou=roles,dc=rez-rennes,dc=fr
+objectClass: organizationalRole
+cn: {{ name }}
+description: {{ description }}

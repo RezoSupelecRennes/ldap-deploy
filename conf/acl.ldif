@@ -1,0 +1,24 @@
+dn: olcDatabase={1}hdb,cn=config
+changetype: modify
+replace: olcAccess
+olcAccess: to *
+  by group/organizationalRole/roleOccupant="cn=admin,ou=roles,dc=rez-rennes,dc=fr" write
+  by * break
+olcAccess: to attrs=userPassword,shadowLastChange
+  by self write
+  by anonymous auth
+olcAccess: to dn.base=""
+  by * read
+olcAccess: to dn.base="dc=rez-rennes,dc=fr"
+  by * read
+olcAccess: to dn.sub="ou=users,dc=rez-rennes,dc=fr"
+  by group/groupOfUniqueNames/uniqueMember="cn=auth,ou=access,dc=rez-rennes,dc=fr" read
+olcAccess: to dn.sub="ou=groups,dc=rez-rennes,dc=fr"
+  by group/groupOfUniqueNames/uniqueMember="cn=auth,ou=access,dc=rez-rennes,dc=fr" read
+  by group/organizationalRole/roleOccupant="cn=member,ou=roles,dc=rez-rennes,dc=fr" read
+olcAccess: to dn.sub="ou=roles,dc=rez-rennes,dc=fr"
+  by group/groupOfUniqueNames/uniqueMember="cn=auth,ou=access,dc=rez-rennes,dc=fr" read
+  by group/organizationalRole/roleOccupant="cn=member,ou=roles,dc=rez-rennes,dc=fr" read
+olcAccess: to *
+  by self write
+  by group/organizationalRole/roleOccupant="cn=member,ou=roles,dc=rez-rennes,dc=fr" read

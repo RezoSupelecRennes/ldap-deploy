@@ -1,0 +1,4 @@
+dn: cn=auth,ou=access,dc=rez-rennes,dc=fr
+objectClass: groupOfUniqueNames
+cn: auth
+uniqueMember: {{ member }}

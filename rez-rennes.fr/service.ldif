@@ -1,0 +1,5 @@
+dn: cn={{ service }},ou=services,dc=rez-rennes,dc=fr
+objectClass: applicationProcess
+objectClass: simpleSecurityObject
+cn: {{ service }}
+userPassword: {{ passwd }}
