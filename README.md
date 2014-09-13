@@ -20,3 +20,8 @@ data:
 
 The `deploy.py` script prompts you for template values not provided in the
 file.
+
+License
+-------
+
+This work is licensed under a MIT license.  See `LICENSE` for more information.
